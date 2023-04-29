@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clone repository') {
             steps {
-                git credentialsId: 'git-credentials', url: 'https://github.com/olehtsyupak/jenkins-fundamentals.git'
+                git branch: 'main', credentialsId: 'git-credentials', url: 'https://github.com/olehtsyupak/jenkins-fundamentals.git'
             }
         }
 
@@ -19,4 +19,3 @@ pipeline {
         }
     }
 }
-
